@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yzb.mapper.TestMapper">
+  <select id="searchCount" parameterType="java.util.Map" resultType="int">
+    select count(1) from user_info
+  </select>
+  <select id="likeSearch" parameterType="java.util.Map" resultType="java.util.Map">
+    select * from user_info limit #{pageIndex},#{pageNum}
+  </select>
+</mapper>
